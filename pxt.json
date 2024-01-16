@@ -1,5 +1,5 @@
 {
-    "name": "LED matrix max7219",
+    "name": "Nikola academy custom Led matrix ",
     "description": "",
     "dependencies": {
         "core": "*",
