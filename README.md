@@ -1,5 +1,5 @@
 
-> Open this page at [https://timothybastiaan.github.io/nikola-gridledmatrix/](https://timothybastiaan.github.io/nikola-gridledmatrix/)
+> Open this page at [https://timothybastiaan.github.io/nikola-gridLedMatrix/](https://timothybastiaan.github.io/nikola-gridLedMatrix/)
 
 ## Use as Extension
 
