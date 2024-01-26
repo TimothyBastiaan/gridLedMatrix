@@ -403,27 +403,29 @@ namespace grid {
         let width = ledImage.width();
         let height = ledImage.height();
         let heightL = height - 1;
+        strip.clear();
+        strip.show();
         for (let i = 1; i <= width; i++) 
         {
             for (let j = 0; j < height; j++) 
             {
                 if (i % 2 == 1) 
-                {
-                    if (ledImage.pixelBrightness(i - 1, heightL - j) == 255) 
-                    {
-                        strip.setMatrixColor(i - 1, j, neopixel.colors(color));
+                {   
+                    if (ledImage.pixelBrightness(i - 1, j) == 255) {
+                        strip.setMatrixColor(j, i - 1, neopixel.colors(color));
                     }
+                    
                 }
                 else 
                 {
-                    if (ledImage.pixelBrightness(i - 1, j) == 255) 
-                    {
-                        strip.setMatrixColor(i - 1, j, neopixel.colors(color));
+                    if (ledImage.pixelBrightness(i - 1, heightL - j) == 255) {
+                        strip.setMatrixColor(j, i - 1, neopixel.colors(color));
                     }
                 }
             }
         }
-        basic.pause(50);
+        strip.show();
+        basic.pause(1000);
     }
 
 }
