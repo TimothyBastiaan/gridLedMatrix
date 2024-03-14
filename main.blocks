@@ -1,19 +1,55 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="Ia$XBc6}Ey25/Wh?%!O9">strip</variable></variables><block type="pxt-on-start" id="jt^l%-07PyuVHurSIFNt" x="328" y="-230"><statement name="HANDLER"><block type="variables_set" id="YZ7o8Ta2IP#n,ssfjvOb"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="neopixel_create" id="b1k,D?A]L$f7l~idC~3%"><field name="pin">DigitalPin.P8</field><field name="mode">NeoPixelMode.RGB</field><value name="numleds"><shadow type="math_number" id="wwp0Re_}!irp5x;[B0jU"><field name="NUM">160</field></shadow></value></block></value><next><block type="neopixel_set_matrix_width" id="!b#%JMgqw1G$Ag.n`tS?"><value name="strip"><block type="variables_get" id="aB8#146Ep:^i`VghZOiX"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><value name="width"><shadow type="math_number" id="M[,m3gijx[kpI0!p9ubO"><field name="NUM">8</field></shadow></value></block></next></block></statement></block><block type="device_forever" id="GY*tX=]WX%e{j$I.Yh.h" x="0" y="0"><statement name="HANDLER"><block type="grid_LedMatrixWS2812b" id="|@)OzHig=Hn60367J{ry"><field name="color">NeoPixelColors.Red</field><field name="LEDS">`
-        # # . . # # . # # # # # # . # # # # # # 
-        # # . . # # . # # # # # # . # # # # # # 
-        # # . . # # . # # . . # # . . . # # . . 
-        # # # # # # . # # . . # # . . . # # . . 
-        # # # # # # . # # . . # # . . . # # . . 
-        # # . . # # . # # . . # # . . . # # . . 
-        # # . . # # . # # # # # # . . . # # . . 
-        # # . . # # . # # # # # # . . . # # . .
-        `</field><value name="strip"><block type="variables_get" id="og}U%tO)(OoxaZztNYp4"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><next><block type="grid_LedMatrixWS2812b" id="jm47EMeK/{7tBE@p!G$i"><field name="color">NeoPixelColors.Red</field><field name="LEDS">`
-        # # . . # # . # # # # # # . # # # # # # 
-        # # . . # # . # # # # # # . # # # # # # 
-        # # . . # # . # # . . # # . . . # # . . 
-        # # # # # # . # # . . # # . . . # # . . 
-        # # # # # # . # # . . # # . . . # # . . 
-        # # . . # # . # # . . # # . . . # # . . 
-        # # . . # # . # # # # # # . . . # # . . 
-        # # . . # # . # # # # # # . . . # # . .
-        `</field><value name="strip"><block type="variables_get" id="PY2X^jHT/(?s8v}zfTnm"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value></block></next></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="Ia$XBc6}Ey25/Wh?%!O9">strip</variable><variable id="2{=7(#j2u`,nsUM2JDCk">strip2</variable></variables><block type="pxt-on-start" id="jt^l%-07PyuVHurSIFNt" x="0" y="0"><statement name="HANDLER"><block type="max7219_matrix_setup" id="A/`3:PUmdB]r|cFom{KF"><field name="cs">DigitalPin.P16</field><field name="mosi">DigitalPin.P15</field><field name="miso">DigitalPin.P14</field><field name="sck">DigitalPin.P13</field><value name="num"><shadow type="math_number" id="#Ts?YH?-!mg-cTEU_[ZN"><field name="NUM">4</field></shadow></value><next><block type="max7219_matrix_for_4_in_1_modules" id="3OrT~r@TTS}OEeh_C)S%"><field name="rotation">rotation_direction.clockwise</field><value name="reversed"><shadow type="logic_boolean" id="zM%S[dHd2zr4ROp3/(UX"><field name="BOOL">FALSE</field></shadow></value><next><block type="variables_set" id="{gwJp^?X+QW31Ywq$l=X"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="neopixel_create" id="2TU/,]9fP^4qSdj{QH%8"><field name="pin">DigitalPin.P8</field><field name="mode">NeoPixelMode.RGB</field><value name="numleds"><shadow type="math_number" id="(3NO]-^clqonBX*52Nf/"><field name="NUM">160</field></shadow></value></block></value><next><block type="neopixel_set_brightness" id="It*|08;-!o@w1!%zVZk1"><value name="strip"><block type="variables_get" id="FQ~=,ti2SsK59/6~4k5?"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><value name="brightness"><shadow type="math_number" id="uEn!,d0f!:r=szRF-MHD"><field name="NUM">50</field></shadow></value></block></next></block></next></block></next></block></statement></block><block type="device_forever" id="GY*tX=]WX%e{j$I.Yh.h" x="4" y="561"><statement name="HANDLER"><block type="grid_testledMatrixMax7219" id="=g28Ws1bf+kz(JM?Nhb)"><next><block type="grid_LedMatrixWS2812b" id="|)6uZJS~$W9-Qz_U2@,t"><field name="color">NeoPixelColors.Orange</field><field name="LEDS">`
+        . . . . . . . . . . . . . . . . . # # # 
+        . . . . . . . . . . . . . . . . . . . . 
+        # . . # . . . . . . . . . . . . . . . . 
+        # # . # . . . . . . . . . . . . . . . . 
+        # . # # . . . . . . . . . . . . . . . . 
+        # . . # . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        # # # . . . . . . . . . . . . . . . . .
+        `</field><value name="strip"><block type="variables_get" id="U_}x3*^W3s}`)-cexS^$"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><next><block type="grid_LedMatrixWS2812b" id="V`$RTa]{WIE3YX1mQM@M"><field name="color">NeoPixelColors.Green</field><field name="LEDS">`
+        . . . . . . . . . . . . . . # # # . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . # . . . . . . . . . . . . . . 
+        . . . . . # . . . . . . . . . . . . . . 
+        . . . . . # . . . . . . . . . . . . . . 
+        . . . . . # . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . # # # . . . . . . . . . . . . . .
+        `</field><value name="strip"><block type="variables_get" id="N4|D$!*~$;4AMNb~L708"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><next><block type="grid_LedMatrixWS2812b" id="b7.H`kxasj.s-M-m@_GS"><field name="color">NeoPixelColors.Blue</field><field name="LEDS">`
+        . . . . . . . . . . . # # # . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . # . # . . . . . . . . . . 
+        . . . . . . . # # . . . . . . . . . . . 
+        . . . . . . . # # . . . . . . . . . . . 
+        . . . . . . . # . # . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . # # # . . . . . . . . . . .
+        `</field><value name="strip"><block type="variables_get" id="/Wv?kROK4l%rbvll7V~)"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><next><block type="grid_LedMatrixWS2812b" id="q.$lMU2i?!n4[Te):,V+"><field name="color">NeoPixelColors.White</field><field name="LEDS">`
+        . . . . . . . . # # # . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . # # # . . . . . . . 
+        . . . . . . . . . . # . # . . . . . . . 
+        . . . . . . . . . . # . # . . . . . . . 
+        . . . . . . . . . . # # # . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . # # # . . . . . . . .
+        `</field><value name="strip"><block type="variables_get" id="bQP;0?1|*w0:5dw$L%5z"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><next><block type="grid_LedMatrixWS2812b" id="+D,BR4)tTSw6aJ%6V)g0"><field name="color">NeoPixelColors.Red</field><field name="LEDS">`
+        . . . . . # # # . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . # . . . . . 
+        . . . . . . . . . . . . . . # . . . . . 
+        . . . . . . . . . . . . . . # . . . . . 
+        . . . . . . . . . . . . . . # # . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . # # # . . . . .
+        `</field><value name="strip"><block type="variables_get" id="}x@,))VsvtQ$`AGxF3x~"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><next><block type="grid_LedMatrixWS2812b" id="~Cn2zn(D~}{3TC{AmO{g"><field name="color">NeoPixelColors.Purple</field><field name="LEDS">`
+        # # # # # . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . . . # . 
+        . . . . . . . . . . . . . . . . . # . # 
+        . . . . . . . . . . . . . . . . . # # # 
+        . . . . . . . . . . . . . . . . . # . # 
+        . . . . . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . # # # # #
+        `</field><value name="strip"><block type="variables_get" id="osJ8Hgz(IMI,5E$M,ERh"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value><next><block type="neopixel_clear" id="CbfQz9/Dpu-+wA$!R1m7"><value name="strip"><block type="variables_get" id=",PWjmrZRf9`P%)#*..62"><field name="VAR" id="Ia$XBc6}Ey25/Wh?%!O9">strip</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>

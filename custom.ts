@@ -403,8 +403,6 @@ namespace grid {
         let width = ledImage.width();
         let height = ledImage.height();
         let heightL = height - 1;
-        strip.clear();
-        strip.show();
         for (let i = 1; i <= width; i++) 
         {
             for (let j = 0; j < height; j++) 
@@ -426,6 +424,29 @@ namespace grid {
         }
         strip.show();
         basic.pause(1000);
+    }
+
+    /**
+     * Create a new NeoPixel driver for `numleds` LEDs.
+     * @param pin the pin where the neopixel is connected.
+     * @param numleds number of leds in the strip, eg: 24,30,60,64
+     */
+    //% blockId="neopixel_create" block="NeoPixel at pin %pin|with %numleds|leds as %mode"
+    //% weight=90 blockGap=8
+    //% parts="neopixel"
+    //% trackArgs=0,2
+    //% blockSetVariable=strip
+    export function create(pin: DigitalPin, numleds: number, mode: NeoPixelMode): neopixel.Strip {
+        let strip = new neopixel.Strip();
+        let stride = mode === NeoPixelMode.RGBW ? 4 : 3;
+        strip.buf = pins.createBuffer(numleds * stride);
+        strip.start = 0;
+        strip._length = numleds;
+        strip._mode = mode || NeoPixelMode.RGB;
+        strip._matrixWidth = 0;
+        strip.setBrightness(128)
+        strip.setPin(pin)
+        return strip;
     }
 
 }
